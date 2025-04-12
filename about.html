@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Neton Consortium</title>
+<style>
+ body {
+     font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+ }
+
+        /* Header Section */
+header {
+    background-color: #05182F;
+    color: white;
+    padding: 30px 0;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    float: left;
+}
+
+.logo img {
+    width: 100px;
+    height:74px;
+    margin-top: 0;
+}
+
+nav {
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: o;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: #2980b9;
+    border-radius: 25px;
+}
+
+/* Dropdown Menu */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    color:#05182F;
+    background-color: #ffff;
+    padding: 10px;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    border-radius: 10%;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    display: block;
+    color:#05182F;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+}
+.drop{
+    border:2px solid #05182F;
+}
+.drop a{
+    color: #05182F;
+}
+.menu-toggle {
+    display: none; /* Initially hidden on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto; /* Pushes the hamburger icon to the right */
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+
+
+        /* Hero Section */
+        .hero {
+            background-image: url('wireless-network.jpg'); /* Replace with actual image path */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            background-color: #f1c40f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #e0b80f;
+        }
+
+        /* About Us Section */
+        .about {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .about h2 {
+            margin-bottom: 20px;
+        }
+
+        .about img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 40px 0;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .team h2 {
+            margin-bottom: 20px;
+        }
+
+        .team-member {
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            text-align: left;
+        }
+
+        .team-member img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        /* Partners Section */
+        .partners {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .partners h2 {
+            margin-bottom: 20px;
+        }
+
+        .partner-logo {
+            display: inline-block;
+            width: 150px;
+            margin: 10px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 40px 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            width: 300px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Call-to-Action Section */
+        .cta {
+            background-color: #3498db;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #3498db;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer .social-links {
+            margin: 10px 0;
+        }
+
+        footer .social-links a {
+            color: white;
+            margin: 0 10px;
+        }
+
+        /* Newsletter Signup */
+        .newsletter {
+            margin-top: 20px;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .newsletter button {
+            padding: 10px 15px;
+            background-color: #f1c40f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background-color: #e0b80f;
+        }
+        @media (max-width: 760px){
+            header {
+        background-color: #05182F;
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .logo img {
+        width: 100px;
+        height: 74px;
+    }
+    nav ul {
+        display: flex;
+        gap: 20px;
+    }
+    nav ul li {
+        list-style: none;
+    }
+    nav ul li a{
+        color:#05182F;
+    }
+    .nav-list {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        width: 80%;
+        background-color: #f0f0f0; /* Background color for dropdown */
+        position: absolute;
+        top: 97px; 
+        left:20px;
+        border-radius: 5%;
+        border: 1px solid #05182F;
+    }
+    .nav-list a{
+        color:#05182F;
+    }
+    .nav-list li {
+        margin: 5px 0; /* Space between dropdown items */
+    }
+    .nav-list .drop{
+        margin-left: 100px;
+    } 
+    .nav-list.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the hamburger icon on smaller screens */
+    }
+ }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container clearfix">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="img/logo.png" alt="Neton Consortium"> 
+            </div>
+             <!-- Navigation Menu -->
+                     <nav>
+                        <div class="menu-toggle" id="mobile-menu">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <ul class="nav-list">
+                            <li><a href="#">Services</a>
+                                <ul class="drop">
+                                    <li><a href="#">Wi-Fi Solutions</a></li>
+                                    <li><a href="#">CCTV Cameras</a></li>
+                                    <li><a href="#">General Connectivity</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <script>
+                        const mobileMenu = document.getElementById('mobile-menu');
+                const navList = document.querySelector('.nav-list');
+                
+                // Toggle the menu when the hamburger icon is clicked
+                mobileMenu.addEventListener('click', (event) => {
+                    navList.classList.toggle('active'); // Toggle the 'active' class
+                    event.stopPropagation(); // Prevent the click event from bubbling up
+                });
+                
+                // Close the menu when clicking outside of it
+                document.addEventListener('click', (event) => {
+                    if (!navList.contains(event.target) && !mobileMenu.contains(event.target)) {
+                        navList.classList.remove('active'); // Remove the 'active' class to close the menu
+                    }
+                });
+                </script>
+        
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Empowering Wireless Innovation through Collaboration</h1>
+        <p>Neton Consortium is a leading provider of wireless solutions and services.</p>
+        <button>Learn More About Us</button>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about">
+        <h2>Our Story</h2>
+        <img src="team-photo.jpg" alt="Neton Consortium Team"> <!-- Replace with actual image -->
+        <p>At Neton Consortium, we believe that wireless technology has the power to transform the way we live and work. That's why we're dedicated to providing innovative wireless solutions that help our clients stay connected and achieve their goals.</p>
+        <h3>Our Mission</h3>
+        <p>Our mission is to empower wireless innovation through collaboration, expertise, and cutting-edge technology. We strive to deliver exceptional value to our clients, partners, and stakeholders, while maintaining the highest standards of quality, integrity, and customer satisfaction.</p>
+        <h3>Our Values</h3>
+        <ul>
+            <li><strong>Innovation:</strong> We're committed to staying at the forefront of wireless technology.</li>
+            <li><strong>Collaboration:</strong> We work closely with our clients and partners.</li>
+            <li><strong>Expertise:</strong> Our team has years of experience in the wireless industry.</li>
+            <li><strong>Customer Satisfaction:</strong> We're passionate about delivering exceptional customer service.</li>
+        </ul>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+            <img src="john-doe.jpg" alt="John Doe"> <!-- Replace with actual image -->
+            <h3>John Doe</h3>
+            <p><strong>CEO</strong></p>
+            <p>John has over 20 years of experience in the wireless industry and has led Neton Consortium since its inception.</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="jane-smith.jpg" alt="Jane Smith"> <!-- Replace with actual image -->
+            <h3>Jane Smith</h3>
+            <p><strong>CTO</strong></p>
+            <p>Jane is a renowned expert in wireless technology, having developed many of the innovative solutions that we offer.</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <h2>Our Partners</h2>
+        <div class="partner-logo">
+            <img src="partner-a-logo.png" alt="Partner A Logo"> <!-- Replace with actual image -->
+            <p>Partner A: A leading provider of wireless infrastructure solutions.</p>
+        </div>
+        <div class="partner-logo">
+            <img src="partner-b-logo.png" alt="Partner B Logo"> <!-- Replace with actual image -->
+            <p>Partner B: A renowned expert in wireless security solutions.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-card">
+            <p>"Neton Consortium has been instrumental in helping us develop our wireless strategy. Their expertise and guidance have been invaluable."</p>
+            <p><strong>John Johnson</strong>, CEO of XYZ Corporation</p>
+        </div>
+        <div class="testimonial-card">
+            <p>"We've been impressed with Neton Consortium's commitment to customer satisfaction. They truly go above and beyond."</p>
+            <p><strong>Jane Doe</strong>, CIO of ABC Inc.</p>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta">
+        <h2>Get in Touch with Us</h2>
+        <p>Contact us to learn more about our services and solutions.</p>
+        <button>Contact Us</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div>
+            <p>&copy; <span id="year"></span> Neton Consortium</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+        <div class="newsletter">
+            <input type="email" placeholder="Subscribe to our newsletter" required>
+            <button>Subscribe</button>
+        </div>
+    </footer>
+
+    <script>
+        // Update copyright year dynamically
+        document.getElementById('year').innerText = new Date().getFullYear();
+    </script>
+</body>
+</html>

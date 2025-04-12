@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetonPrimeLink/home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+           <div class="container clearfix">
+            <!-- Logo -->
+            <div class="logo-container">
+                <div class="logo">
+                  <img src="img/logo.png"  alt="Neton Prime Link">
+                </div>
+              </div>
+            <!-- Navigation Menu -->
+            <nav>                
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#">Home</li>
+                    <li><a href="#">Services</a>
+                        <ul class="drop">
+                            <li><a href="#">Wi-Fi Solutions</a></li>
+                            <li><a href="#">CCTV Cameras</a></li>
+                            <li><a href="#">General Connectivity</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <script>
+                const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+        
+        // Toggle the menu when the hamburger icon is clicked
+        mobileMenu.addEventListener('click', (event) => {
+            navList.classList.toggle('active'); // Toggle the 'active' class
+            event.stopPropagation(); // Prevent the click event from bubbling up
+        });
+        
+        // Close the menu when clicking outside of it
+        document.addEventListener('click', (event) => {
+            if (!navList.contains(event.target) && !mobileMenu.contains(event.target)) {
+                navList.classList.remove('active'); // Remove the 'active' class to close the menu
+            }
+        });
+        </script>
+
+        </div>
+        
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Empowering Connectivity through Innovative Wireless Solutions</h1>
+        <h3>Neton Prime Link</h3>
+        <p>Provides reliable and secure wireless solutions for businesses and organizations</p>
+        <button>Discover Our Solutions</button>
+    </section>
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="img/wifi.avif" alt="Wi-Fi Solutions Icon"> <!-- Replace with actual image -->
+                <h3>Wi-Fi Solutions</h3>
+                <p>Reliable and secure Wi-Fi solutions for businesses and organizations.</p>
+                <a href="solutions.html">Learn More</a>
+            </div>
+            <div class="service-card">
+                <img src="img/cctv.webp" alt="CCTV Cameras Icon"> <!-- Replace with actual image -->
+                <h3>CCTV Cameras</h3>
+                <p>Advanced CCTV camera solutions for enhanced security and surveillance.</p>
+                <a href="solutions.html">Learn More</a>
+            </div>
+            <div class="service-card">
+                <img src="img/solar.jpg" alt="CCTV Cameras Icon"> <!-- Replace with actual image -->
+                <h3>Solar Panels</h3>
+                <p>Advanced CCTV camera solutions for enhanced security and surveillance.</p>
+                <a href="solutions.html">Learn More</a>
+            </div>
+            <div class="service-card">
+                <img src="img/connectivity.jpg" alt="General Connectivity Icon"> <!-- Replace with actual image -->
+                <h3>General Connectivity</h3>
+                <p>Expert connectivity and networking solutions for businesses and organizations.</p>
+                <a href="solutions.html">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-card">
+            <img src="client1-photo.jpg" alt="Byron">
+            <p>"Neton Prime Link's wireless solutions have improved our business operations and increased productivity."</p>
+            <h4>Byron, CEO,Skylink</h4>
+        </div>
+        <div class="testimonial-card">
+            <img src="client2-photo.jpg" alt="Anonymous">
+            <p>"We were impressed with the quality and reliability of Neton Prime Link's CCTV camera solutions."</p>
+            <h4>Anonymous</h4>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta">
+        <h2>Get in Touch with Us</h2>
+        <p>Contact us to learn more about our wireless solutions and how we can help your business.</p>
+        <a href=" https://wa.me/254743714202"><button>Contact Us</button></a>
+    </section>
+
+<!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <!-- Quick Links Section -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Neton Consortium</a></li>
+                    <li><a href="#">Neton Prime Link</a></li>
+                    <li><a href="#">Neton Web Academy</a></li>
+                    <li><a href="#">Neton.Dev</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>Email: info@netonconsortium.com</li>
+                    <li>Phone: +254 741-768-886</li>
+                    <li>Address: Kisii, Kenya</li>
+                </ul>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="footer-section">
+                <h4>Social Media</h4>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+          </div>
+         <p>&copy; 2024 Neton Consortium | All rights reserved</p>
+      </footer>
+
+</body>
+</html>
